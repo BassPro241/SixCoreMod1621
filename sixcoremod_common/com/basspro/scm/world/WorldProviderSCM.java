@@ -2,7 +2,7 @@ package com.basspro.scm.world;
 
 import net.minecraft.world.WorldProvider;
 
-public class WorldProviderPandora extends WorldProvider{
+public class WorldProviderSCM extends WorldProvider{
     
     public String getDimensionName()
     {

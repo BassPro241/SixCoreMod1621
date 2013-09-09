@@ -6,9 +6,6 @@ import java.util.List;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.LongHashMap;
 import net.minecraft.world.biome.BiomeCache;
-import net.minecraft.world.biome.BiomeCacheBlock;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.WorldChunkManager;
 
 public class BiomeCacheSCM {
     
@@ -26,7 +23,7 @@ public class BiomeCacheSCM {
     /** The list of cached BiomeCacheBlocks */
     private List cache = new ArrayList();
 
-    public BiomeCacheSCM(WorldChunkManager par1WorldChunkManager)
+    public BiomeCacheSCM(WorldChunkManagerSCM par1WorldChunkManager)
     {
         this.chunkManager = par1WorldChunkManager;
     }
@@ -55,7 +52,7 @@ public class BiomeCacheSCM {
     /**
      * Returns the BiomeGenBase related to the x, z position from the cache.
      */
-    public BiomeGenBase getBiomeGenAt(int par1, int par2)
+    public BiomeGenBaseSCM getBiomeGenAt(int par1, int par2)
     {
         return this.getBiomeCacheBlock(par1, par2).getBiomeGenAt(par1, par2);
     }
@@ -74,7 +71,7 @@ public class BiomeCacheSCM {
 
             for (int k = 0; k < this.cache.size(); ++k)
             {
-                BiomeCacheBlock biomecacheblock = (BiomeCacheBlock)this.cache.get(k);
+                BiomeCacheBlockSCM biomecacheblock = (BiomeCacheBlockSCM)this.cache.get(k);
                 long l = i - biomecacheblock.lastAccessTime;
 
                 if (l > 30000L || l < 0L)

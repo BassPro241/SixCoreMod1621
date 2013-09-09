@@ -27,7 +27,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class WorldChunkManagerSCM {
     
-    public static ArrayList<BiomeGenBaseSCM> allowedBiomes = new ArrayList<BiomeGenBaseSCM>(Arrays.asList(forest, plains, taiga, taigaHills, forestHills, jungle, jungleHills));
+    public static ArrayList<BiomeGenBaseSCM> allowedBiomes = new ArrayList<BiomeGenBaseSCM>(Arrays.asList());
     private GenLayer genBiomes;
 
     /** A GenLayer containing the indices into BiomeGenBase.biomeList[] */
@@ -71,7 +71,7 @@ public class WorldChunkManagerSCM {
     /**
      * Returns the BiomeGenBase related to the x, z position on the world.
      */
-    public BiomeGenBase getBiomeGenAt(int par1, int par2)
+    public BiomeGenBaseSCM getBiomeGenAt(int par1, int par2)
     {
         return this.biomeCache.getBiomeGenAt(par1, par2);
     }
@@ -147,20 +147,20 @@ public class WorldChunkManagerSCM {
     /**
      * Returns an array of biomes for the location input.
      */
-    public BiomeGenBase[] getBiomesForGeneration(BiomeGenBase[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5)
+    public BiomeGenBaseSCM[] getBiomesForGeneration(BiomeGenBaseSCM[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5)
     {
         IntCache.resetIntCache();
 
         if (par1ArrayOfBiomeGenBase == null || par1ArrayOfBiomeGenBase.length < par4 * par5)
         {
-            par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
+            par1ArrayOfBiomeGenBase = new BiomeGenBaseSCM[par4 * par5];
         }
 
         int[] aint = this.genBiomes.getInts(par2, par3, par4, par5);
 
         for (int i1 = 0; i1 < par4 * par5; ++i1)
         {
-            par1ArrayOfBiomeGenBase[i1] = BiomeGenBase.biomeList[aint[i1]];
+            par1ArrayOfBiomeGenBase[i1] = BiomeGenBaseSCM.biomeList[aint[i1]];
         }
 
         return par1ArrayOfBiomeGenBase;
@@ -170,7 +170,7 @@ public class WorldChunkManagerSCM {
      * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the
      * WorldChunkManager Args: oldBiomeList, x, z, width, depth
      */
-    public BiomeGenBase[] loadBlockGeneratorData(BiomeGenBase[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5)
+    public BiomeGenBaseSCM[] loadBlockGeneratorData(BiomeGenBaseSCM[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5)
     {
         return this.getBiomeGenAt(par1ArrayOfBiomeGenBase, par2, par3, par4, par5, true);
     }
@@ -179,13 +179,13 @@ public class WorldChunkManagerSCM {
      * Return a list of biomes for the specified blocks. Args: listToReuse, x, y, width, length, cacheFlag (if false,
      * don't check biomeCache to avoid infinite loop in BiomeCacheBlock)
      */
-    public BiomeGenBase[] getBiomeGenAt(BiomeGenBase[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5, boolean par6)
+    public BiomeGenBaseSCM[] getBiomeGenAt(BiomeGenBaseSCM[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5, boolean par6)
     {
         IntCache.resetIntCache();
 
         if (par1ArrayOfBiomeGenBase == null || par1ArrayOfBiomeGenBase.length < par4 * par5)
         {
-            par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
+            par1ArrayOfBiomeGenBase = new BiomeGenBaseSCM[par4 * par5];
         }
 
         if (par6 && par4 == 16 && par5 == 16 && (par2 & 15) == 0 && (par3 & 15) == 0)
@@ -200,7 +200,7 @@ public class WorldChunkManagerSCM {
 
             for (int i1 = 0; i1 < par4 * par5; ++i1)
             {
-                par1ArrayOfBiomeGenBase[i1] = BiomeGenBase.biomeList[aint[i1]];
+                par1ArrayOfBiomeGenBase[i1] = BiomeGenBaseSCM.biomeList[aint[i1]];
             }
 
             return par1ArrayOfBiomeGenBase;
@@ -223,7 +223,7 @@ public class WorldChunkManagerSCM {
 
         for (int j2 = 0; j2 < l1 * i2; ++j2)
         {
-            BiomeGenBase biomegenbase = BiomeGenBase.biomeList[aint[j2]];
+            BiomeGenBaseSCM biomegenbase = BiomeGenBaseSCM.biomeList[aint[j2]];
 
             if (!par4List.contains(biomegenbase))
             {
@@ -255,7 +255,7 @@ public class WorldChunkManagerSCM {
         {
             int l2 = l + k2 % l1 << 2;
             int i3 = i1 + k2 / l1 << 2;
-            BiomeGenBase biomegenbase = BiomeGenBase.biomeList[aint[k2]];
+            BiomeGenBaseSCM biomegenbase = BiomeGenBaseSCM.biomeList[aint[k2]];
 
             if (par4List.contains(biomegenbase) && (chunkposition == null || par5Random.nextInt(j2 + 1) == 0))
             {

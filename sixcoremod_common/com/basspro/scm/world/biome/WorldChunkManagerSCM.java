@@ -18,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class WorldChunkManagerSCM {
     
-    public static ArrayList<BiomeGenBaseSCM> allowedBiomes = new ArrayList<BiomeGenBaseSCM>(Arrays.asList());
+    public static ArrayList<BiomeGenBaseSCM> allowedBiomes = new ArrayList<BiomeGenBaseSCM>(Arrays.asList(BiomeGenBaseSCM.highlands));
     private GenLayer genBiomes;
 
     /** A GenLayer containing the indices into BiomeGenBase.biomeList[] */

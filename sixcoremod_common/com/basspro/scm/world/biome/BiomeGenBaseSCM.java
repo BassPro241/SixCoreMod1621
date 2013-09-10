@@ -41,6 +41,7 @@ public abstract class BiomeGenBaseSCM {
 
     /** An array of all the biomes, indexed by biome id. */
     public static final BiomeGenBaseSCM[] biomeList = new BiomeGenBaseSCM[256];
+    public static final BiomeGenBaseSCM highlands = (new BiomeGenHighlands(1)).setColor(9286496).setBiomeName("Highlands").setTemperatureRainfall(0.8F, 0.4F).setMinMaxHeight(-0.2F, 0.5F);
     public String biomeName;
     public int color;
 

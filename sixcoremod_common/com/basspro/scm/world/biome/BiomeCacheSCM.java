@@ -95,7 +95,7 @@ public class BiomeCacheSCM {
     /**
      * Get the world chunk manager object for a biome list.
      */
-    static WorldChunkManagerSCM getChunkManager(BiomeCache par0BiomeCache)
+    static WorldChunkManagerSCM getChunkManager(BiomeCacheSCM par0BiomeCache)
     {
         return par0BiomeCache.chunkManager;
     }

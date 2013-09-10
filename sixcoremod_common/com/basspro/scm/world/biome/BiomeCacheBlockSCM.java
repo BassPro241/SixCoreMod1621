@@ -1,7 +1,5 @@
 package com.basspro.scm.world.biome;
 
-import net.minecraft.world.biome.BiomeCache;
-import net.minecraft.world.biome.BiomeGenBase;
 
 public class BiomeCacheBlockSCM {
     /** An array of chunk temperatures saved by this cache. */

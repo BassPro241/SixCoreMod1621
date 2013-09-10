@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.LongHashMap;
-import net.minecraft.world.biome.BiomeCache;
 
 public class BiomeCacheSCM {
     

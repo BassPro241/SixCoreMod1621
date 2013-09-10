@@ -23,6 +23,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.SpawnListEntry;
 import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenForest;
@@ -42,6 +43,7 @@ public abstract class BiomeGenBaseSCM {
     /** An array of all the biomes, indexed by biome id. */
     public static final BiomeGenBaseSCM[] biomeList = new BiomeGenBaseSCM[256];
     public static final BiomeGenBaseSCM highlands = (new BiomeGenHighlands(1)).setColor(9286496).setBiomeName("Highlands").setTemperatureRainfall(0.8F, 0.4F).setMinMaxHeight(-0.2F, 0.5F);
+    public static final BiomeGenBaseSCM pandoranSwamp = (new BiomeGenSwampSCM(2)).setColor(522674).setBiomeName("Pandoran Swamp").func_76733_a(9154376).setMinMaxHeight(-0.2F, 0.1F).setTemperatureRainfall(0.8F, 0.9F);
     public String biomeName;
     public int color;
 

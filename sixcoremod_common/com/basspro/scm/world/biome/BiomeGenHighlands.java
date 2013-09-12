@@ -2,7 +2,7 @@ package com.basspro.scm.world.biome;
 
 import net.minecraft.world.biome.BiomeGenBase;
 
-public class BiomeGenHighlands extends BiomeGenBaseSCM
+public class BiomeGenHighlands extends BiomeGenBase
 {
     protected BiomeGenHighlands(int par1)
     {

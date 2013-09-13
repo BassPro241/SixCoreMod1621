@@ -63,10 +63,10 @@ public class ChunkProviderSCM  implements IChunkProvider
     private MapGenBase caveGenerator = new MapGenCavesSCM();
 
     /** Holds Mineshaft Generator */
-    private MapGenMineshaftSCM mineshaftGenerator = new MapGenMineshaftSCM();
+//    private MapGenMineshaftSCM mineshaftGenerator = new MapGenMineshaftSCM();
 
     /** Holds ravine generator */
-    private MapGenBase ravineGenerator = new MapGenRavineSCM();
+//    private MapGenBase ravineGenerator = new MapGenRavineSCM();
 
     /** The biomes that are used to generate the chunk */
     private BiomeGenBase[] biomesForGeneration;
@@ -94,11 +94,11 @@ public class ChunkProviderSCM  implements IChunkProvider
 
     {
         caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
-        mineshaftGenerator = (MapGenMineshaftSCM) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
-        ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
+//        mineshaftGenerator = (MapGenMineshaftSCM) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
+//        ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
     }
 
-    public ChunkProviderSavannah(World par1World, long par2, boolean par4)
+    public ChunkProviderSCM(World par1World, long par2, boolean par4)
     {
         this.worldObj = par1World;
         this.mapFeaturesEnabled = par4;
@@ -303,12 +303,12 @@ public class ChunkProviderSCM  implements IChunkProvider
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, var3, this.biomesForGeneration);
         this.caveGenerator.generate(this, this.worldObj, par1, par2, var3);
-        this.ravineGenerator.generate(this, this.worldObj, par1, par2, var3);
+//        this.ravineGenerator.generate(this, this.worldObj, par1, par2, var3);
 
-        if (this.mapFeaturesEnabled)
-        {
-            this.mineshaftGenerator.generate(this, this.worldObj, par1, par2, var3);
-        }
+//        if (this.mapFeaturesEnabled)
+//        {
+//            this.mineshaftGenerator.generate(this, this.worldObj, par1, par2, var3);
+//        }
 
         Chunk var4 = new Chunk(this.worldObj, var3, par1, par2);
         byte[] var5 = var4.getBiomeArray();
@@ -502,26 +502,26 @@ public class ChunkProviderSCM  implements IChunkProvider
 
         MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(par1IChunkProvider, worldObj, rand, par2, par3, var11));
 
-        if (this.mapFeaturesEnabled)
-        {
-            this.mineshaftGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
-        }
+//        if (this.mapFeaturesEnabled)
+//        {
+//            this.mineshaftGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
+//        }
 
         int var12;
         int var13;
         int var14;
 
-        if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, var11, LAVA) && !var11 && this.rand.nextInt(4) == 0)
-        {
-            var12 = var4 + this.rand.nextInt(16) + 8;
-            var13 = this.rand.nextInt(this.rand.nextInt(120) + 8);
-            var14 = var5 + this.rand.nextInt(16) + 8;
-
-            if (var13 < 63 || this.rand.nextInt(10) == 0)
-            {
-                (new WorldGenLavaLakesSCM(Block.lavaStill.blockID)).generate(this.worldObj, this.rand, var12, var13, var14);
-            }
-        }
+//        if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, var11, LAVA) && !var11 && this.rand.nextInt(4) == 0)
+//        {
+//            var12 = var4 + this.rand.nextInt(16) + 8;
+//            var13 = this.rand.nextInt(this.rand.nextInt(120) + 8);
+//            var14 = var5 + this.rand.nextInt(16) + 8;
+//
+//            if (var13 < 63 || this.rand.nextInt(10) == 0)
+//            {
+//                (new WorldGenLavaLakesSCM(Block.lavaStill.blockID)).generate(this.worldObj, this.rand, var12, var13, var14);
+//            }
+//        }
 
 //        for (int k = 0; k < 1; k++)
 //        {
@@ -696,10 +696,10 @@ public class ChunkProviderSCM  implements IChunkProvider
 
     public void recreateStructures(int par1, int par2)
     {
-        if (this.mapFeaturesEnabled)
-        {
-            this.mineshaftGenerator.generate(this, this.worldObj, par1, par2, (byte[]) null);
-        }
+//        if (this.mapFeaturesEnabled)
+//        {
+//            this.mineshaftGenerator.generate(this, this.worldObj, par1, par2, (byte[]) null);
+//        }
     }
 
     public boolean unloadQueuedChunks()

@@ -8,6 +8,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.basspro.scm.SixCoreMod;
 import com.basspro.scm.world.biome.SixCoreModBiomes;
+import com.basspro.scm.world.gen.ChunkProviderSCM;
 
 public class WorldProviderSCM extends WorldProvider {
 

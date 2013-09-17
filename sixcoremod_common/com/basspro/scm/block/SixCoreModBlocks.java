@@ -1,6 +1,7 @@
 package com.basspro.scm.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFire;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,6 +39,9 @@ public class SixCoreModBlocks
     
     // Portal Block
     public static BlockPortal pandoraPortal;
+    
+    // Portal Placer Fire
+    public static BlockFire fireSCM;
 
     public static void init()
     {
@@ -58,6 +62,8 @@ public class SixCoreModBlocks
 //        blockDust = new BlockDust(BlockIds.DUST_BLOCK, Material.sand).setUnlocalizedName("dustBlock");
         
         pandoraPortal = (BlockPandoraPortal) new BlockPandoraPortal(BlockIds.PANDORAPORTAL_BLOCK).setUnlocalizedName("pandoraPortal");
+        
+        fireSCM = (BlockFireSCM) new BlockFireSCM(BlockIds.SCMFIRE_BLOCK).setUnlocalizedName("fireSCM");
 
         GameRegistry.registerBlock(oreOnyx, Strings.ONYX_ORE_NAME);
         GameRegistry.registerBlock(oreEridium, Strings.ERIDIUM_ORE_NAME);

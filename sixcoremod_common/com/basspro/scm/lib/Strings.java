@@ -24,6 +24,7 @@ public class Strings
     public static final String PLATINUM_BLOCK_NAME = "platinumBlock";
     public static final String DUST_BLOCK_NAME = "dustBlock";
     public static final String PANDORAPORTAL_NAME = "pandoraPortal";
+    public static final String SCMFIRE_NAME = "fireSCM";
 
     /* Item name constants */
     public static final String PORK_SANDWICH_NAME = "porkSandwich";
@@ -50,18 +51,5 @@ public class Strings
     
     /* Enchantment Constants */
     public static final String CORROSION_ASPECT_NAME = "corrosion";
-    
-    /* World Constants */
-    public static String PANDORA_SEED_DEFAULT = "pandoraSeed";
-    
-    public static String PANDORA_SEED;
-    
-    /* Biome Constants */
-    public static final String PANDORA_BIOME_NAME = "pandoraBiome";
-    public static final String PANDORA_BIOME_2_NAME = "pandoraBiome2";
-    public static final String HIGHLANDS_BIOME_NAME = "highlands";
-    public static final String THEDUST_BIOME_NAME = "theDust";
-    public static final String MAJOR_FEATURE_NAME = "majorFeature";
-    public static final String MINOR_FEATURE_NAME = "minorFeature";
 
 }

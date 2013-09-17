@@ -76,6 +76,11 @@ public class ConfigurationHandler
                     Strings.PANDORAPORTAL_NAME,
                     BlockIds.PANDORAPORTAL_BLOCK_DEFAULT).getInt(
                     BlockIds.PANDORAPORTAL_BLOCK_DEFAULT);
+            
+            BlockIds.SCMFIRE_BLOCK = configuration.getBlock(
+                    Strings.SCMFIRE_NAME,
+                    BlockIds.SCMFIRE_BLOCK_DEFAULT).getInt(
+                    BlockIds.SCMFIRE_BLOCK_DEFAULT);
 
             /* Item configs */
             ItemIds.PORK_SANDWICH = configuration.getItem(
@@ -122,7 +127,6 @@ public class ConfigurationHandler
                     ItemIds.ONYX_SWORD_DEFAULT).getInt(
                     ItemIds.ONYX_SWORD_DEFAULT);
             
-            Strings.PANDORA_SEED = configuration.get("general", Strings.PANDORA_SEED_DEFAULT, "").getString();
 
         }
         catch (Exception e)

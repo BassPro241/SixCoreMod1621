@@ -21,6 +21,8 @@ public class BlockIds
     public static int DUST_BLOCK_DEFAULT = 200;
     
     public static int PANDORAPORTAL_BLOCK_DEFAULT = 3040;
+    
+    public static int SCMFIRE_BLOCK_DEFAULT = 3050;
 
     /* Current block ID's */
     public static int ONYX_ORE;
@@ -41,4 +43,6 @@ public class BlockIds
     public static int DUST_BLOCK;
     
     public static int PANDORAPORTAL_BLOCK;
+    
+    public static int SCMFIRE_BLOCK;
 }

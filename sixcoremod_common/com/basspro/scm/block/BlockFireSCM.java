@@ -27,7 +27,7 @@ public class BlockFireSCM extends BlockFire {
     }
 
     @SideOnly(Side.CLIENT)
-    private Icon[] iconArray;
+    private Icon[] blockIconArray;
 
     @Override
     @SideOnly(Side.CLIENT)
@@ -122,7 +122,9 @@ public class BlockFireSCM extends BlockFire {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
 
-        blockIcon = iconRegister.registerIcon(Textures.TEXTURE_PATH
-                + this.getUnlocalizedName().substring(5));
+        blockIconArray = new Icon[] {iconRegister.registerIcon(Textures.TEXTURE_PATH
+                + this.getUnlocalizedName().substring(5) + "_layer_0"), iconRegister.registerIcon(Textures.TEXTURE_PATH
+                        + this.getUnlocalizedName().substring(5) + "_layer_1")};
     }
+    
 }

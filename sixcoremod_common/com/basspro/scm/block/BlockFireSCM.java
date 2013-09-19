@@ -9,6 +9,7 @@ import static net.minecraftforge.common.ForgeDirection.WEST;
 
 import java.util.Random;
 
+import com.basspro.scm.SixCoreMod;
 import com.basspro.scm.lib.Textures;
 
 import cpw.mods.fml.relauncher.Side;
@@ -24,6 +25,7 @@ public class BlockFireSCM extends BlockFire {
     protected BlockFireSCM(int par1) {
         super(par1);
         this.setTickRandomly(true);
+//        setCreativeTab(SixCoreMod.tabSixCoreModBlock);
     }
 
     @SideOnly(Side.CLIENT)
@@ -51,9 +53,9 @@ public class BlockFireSCM extends BlockFire {
         float f2;
 
         if (!par1World.doesBlockHaveSolidTopSurface(par2, par3 - 1, par4)
-                && !Block.fire.canBlockCatchFire(par1World, par2, par3 - 1,
+                && !SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2, par3 - 1,
                         par4, UP)) {
-            if (Block.fire.canBlockCatchFire(par1World, par2 - 1, par3, par4,
+            if (SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2 - 1, par3, par4,
                     EAST)) {
                 for (l = 0; l < 2; ++l) {
                     f = (float) par2 + par5Random.nextFloat() * 0.1F;
@@ -64,7 +66,7 @@ public class BlockFireSCM extends BlockFire {
                 }
             }
 
-            if (Block.fire.canBlockCatchFire(par1World, par2 + 1, par3, par4,
+            if (SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2 + 1, par3, par4,
                     WEST)) {
                 for (l = 0; l < 2; ++l) {
                     f = (float) (par2 + 1) - par5Random.nextFloat() * 0.1F;
@@ -75,7 +77,7 @@ public class BlockFireSCM extends BlockFire {
                 }
             }
 
-            if (Block.fire.canBlockCatchFire(par1World, par2, par3, par4 - 1,
+            if (SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2, par3, par4 - 1,
                     SOUTH)) {
                 for (l = 0; l < 2; ++l) {
                     f = (float) par2 + par5Random.nextFloat();
@@ -86,7 +88,7 @@ public class BlockFireSCM extends BlockFire {
                 }
             }
 
-            if (Block.fire.canBlockCatchFire(par1World, par2, par3, par4 + 1,
+            if (SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2, par3, par4 + 1,
                     NORTH)) {
                 for (l = 0; l < 2; ++l) {
                     f = (float) par2 + par5Random.nextFloat();
@@ -97,7 +99,7 @@ public class BlockFireSCM extends BlockFire {
                 }
             }
 
-            if (Block.fire.canBlockCatchFire(par1World, par2, par3 + 1, par4,
+            if (SixCoreModBlocks.fireSCM.canBlockCatchFire(par1World, par2, par3 + 1, par4,
                     DOWN)) {
                 for (l = 0; l < 2; ++l) {
                     f = (float) par2 + par5Random.nextFloat();

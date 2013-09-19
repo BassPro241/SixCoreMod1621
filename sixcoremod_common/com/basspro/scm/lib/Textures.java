@@ -41,6 +41,9 @@ public class Textures {
 
     public static final String BLOCK_PANDORAPORTAL_BLOCK = TEXTURE_PATH
                                                                  + "pandoraPortal";
+    
+    public static final String BLOCK_FIRESCM_BLOCK = TEXTURE_PATH
+            + "fireSCM";
 
     // Item Textures
     public static final String ITEM_PORK_SANDWICH        = TEXTURE_PATH

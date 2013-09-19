@@ -55,8 +55,6 @@ public class SixCoreMod
     // public static CreativeTabs tabSixCoremodMobs = new
     // TabSixCoreModMobs(CreativeTabs.getNextID(), "SiX Core Mobs");
 
-    public static int dimension = 2;
-
     @Mod.EventHandler
     public void init(FMLPreInitializationEvent event)
     {

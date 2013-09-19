@@ -22,7 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockPandoraPortal extends BlockPortal {
     public BlockPandoraPortal(int id) {
         super(id);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        setCreativeTab(SixCoreMod.tabSixCoreModBlock);
     }
 
     @Override

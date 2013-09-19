@@ -15,7 +15,7 @@ public class WorldProviderSCM extends WorldProvider {
     public void registerWorldChunkManager() {
         this.worldChunkMgr = new WorldChunkManagerHell(
                 SixCoreModBiomes.highlands, 0.7F, 1.0F);
-        this.dimensionId = SixCoreMod.dimension;
+        this.dimensionId = DimensionSCM.dimension;
     }
 
     public String getSaveFolder() {

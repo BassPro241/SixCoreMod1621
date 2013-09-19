@@ -79,8 +79,9 @@ public class SixCoreModBlocks
         
 //        GameRegistry.registerBlock(blockDust, Strings.DUST_BLOCK_NAME);
         
-
         GameRegistry.registerBlock(pandoraPortal, Strings.PANDORAPORTAL_NAME);
+        
+//        GameRegistry.registerBlock(fireSCM, Strings.SCMFIRE_NAME);
 
         MinecraftForge.setBlockHarvestLevel(oreOnyx, "pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(oreEridium, "pickaxe", 2);

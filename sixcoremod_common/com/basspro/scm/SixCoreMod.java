@@ -16,6 +16,7 @@ import com.basspro.scm.creativetab.TabSixCoreOre;
 import com.basspro.scm.item.SixCoreModItems;
 import com.basspro.scm.lib.Reference;
 import com.basspro.scm.recipe.RecipesSixCoreMod;
+import com.basspro.scm.world.DimensionSCM;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
@@ -75,6 +76,9 @@ public class SixCoreMod
 
         // Recipes
         RecipesSixCoreMod.init();
+        
+        // Dimension Generation
+        DimensionSCM.init();
 
         // World Generation
 //        SixCoreModWorldGen.init();

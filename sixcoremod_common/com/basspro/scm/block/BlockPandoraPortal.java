@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
@@ -14,6 +13,7 @@ import net.minecraft.world.World;
 
 import com.basspro.scm.SixCoreMod;
 import com.basspro.scm.lib.Textures;
+import com.basspro.scm.world.DimensionSCM;
 import com.basspro.scm.world.TeleporterSCM;
 
 import cpw.mods.fml.relauncher.Side;
@@ -49,16 +49,16 @@ public class BlockPandoraPortal extends BlockPortal {
 
             if (player.timeUntilPortal > 0) {
                 player.timeUntilPortal = 10;
-            } else if (player.dimension != SixCoreMod.dimension) {
+            } else if (player.dimension != DimensionSCM.dimension) {
                 player.timeUntilPortal = 10;
 
                 player.mcServer
                         .getConfigurationManager()
                         .transferPlayerToDimension(
                                 player,
-                                SixCoreMod.dimension,
+                                DimensionSCM.dimension,
                                 new TeleporterSCM(
-                                        mServer.worldServerForDimension(SixCoreMod.dimension)));
+                                        mServer.worldServerForDimension(DimensionSCM.dimension)));
             } else {
                 player.timeUntilPortal = 10;
                 player.mcServer.getConfigurationManager()

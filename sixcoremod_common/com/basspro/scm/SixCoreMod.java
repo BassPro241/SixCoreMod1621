@@ -78,7 +78,7 @@ public class SixCoreMod
         RecipesSixCoreMod.init();
         
         // Dimension Generation
-        DimensionSCM.init();
+//        DimensionSCM.init();
 
         // World Generation
 //        SixCoreModWorldGen.init();

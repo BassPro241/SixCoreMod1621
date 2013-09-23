@@ -51,10 +51,10 @@ public class SixCoreMod
 //    public static CreativeTabs tabSixCoreCombat = new TabSixCoreCombat(
 //            CreativeTabs.getNextID(), Reference.MOD_ID + "Combat");
 
-    // public static CreativeTabs tabSixCoreModTools = new
-    // TabSixCoreModTools(CreativeTabs.getNextID(), "Six Core Tools");
-    // public static CreativeTabs tabSixCoremodMobs = new
-    // TabSixCoreModMobs(CreativeTabs.getNextID(), "SiX Core Mobs");
+//     public static CreativeTabs tabSixCoreModTools = new
+//     TabSixCoreModTools(CreativeTabs.getNextID(), "Six Core Tools");
+//     public static CreativeTabs tabSixCoremodMobs = new
+//     TabSixCoreModMobs(CreativeTabs.getNextID(), "SiX Core Mobs");
 
     @Mod.EventHandler
     public void init(FMLPreInitializationEvent event)
